@@ -34,10 +34,10 @@ public class Cafe extends Building{
      * @param nCups- amount of cups to add
      */
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups){
-        this.nCoffeeOunces =+ nCoffeeOunces;
-        this.nSugarPackets =+ nSugarPackets;
-        this.nCreams =+ nCreams;
-        this.nCups =+ nCups;
+        this.nCoffeeOunces += nCoffeeOunces;
+        this.nSugarPackets += nSugarPackets;
+        this.nCreams += nCreams;
+        this.nCups += nCups;
     }
     /**
      * a method that decreases the amount of invetory by how is sold
@@ -55,10 +55,10 @@ public class Cafe extends Building{
         }if (this.nCups < 1){
             this.restock(size, nSugarPackets, nCreams, 100);
         }
-            this.nCoffeeOunces =- size;
-            this.nSugarPackets =- nSugarPackets;
-            this.nCreams =- nCreams;
-            this.nCups =- 1;
+            this.nCoffeeOunces -= size;
+            this.nSugarPackets -= nSugarPackets;
+            this.nCreams -= nCreams;
+            this.nCups -= 1;
         }
     
     public static void main(String[] args) {
