@@ -3,6 +3,13 @@ import java.util.ArrayList;
 public class House extends Building{
   private ArrayList<String> residents;
   private boolean hasDiningRoom;
+  /**
+   * constructor
+   * @param name- name of the house
+   * @param address- address of the house
+   * @param nFloors- amount of floors of the house
+   * @param hasDiningRoom- boolean of whether it has dining room
+   */
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
     // System.out.println("You have built a house: 🏠");
     super(name, address, nFloors);
@@ -10,12 +17,16 @@ public class House extends Building{
     this.hasDiningRoom = hasDiningRoom;
   }
 
-    /** Accessor for hasDiningRoom */
+    /** Accessor for hasDiningRoom 
+     * @return boolean of whether there is a dining hall
+    */
     public boolean hasDiningRoom() {
       return this.hasDiningRoom;
     }
   
-    /** Accessor for number of residents */
+    /** Accessor for number of residents 
+     * @return the amount of resident in the house
+    */
     public int nResidents() {
       return this.residents.size();
     }
