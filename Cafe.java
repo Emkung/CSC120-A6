@@ -54,13 +54,12 @@ public class Cafe extends Building{
             this.restock(size, nSugarPackets, 100, nCups);
         }if (this.nCups < 1){
             this.restock(size, nSugarPackets, nCreams, 100);
-        }else{
+        }
             this.nCoffeeOunces =- size;
             this.nSugarPackets =- nSugarPackets;
             this.nCreams =- nCreams;
             this.nCups =- 1;
         }
-    }
     
     public static void main(String[] args) {
         Cafe myCafe = new Cafe("Boing Cafe", "ur mom", 4, 20, 20, 20, 20);
