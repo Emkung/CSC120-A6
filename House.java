@@ -45,6 +45,27 @@ public class House extends Building{
       System.out.println(name + " has just moved into " + this.getName() + "! Go say hello :-)");
     }
     /**
+     * method that removes a person from a house 
+     * @param name- name of the person m
+     * @return the name of the person
+     */
+    public String moveOut(String name){// return the name of the person who moved out
+      if (!this.residents.contains(name)) {
+        throw new RuntimeException(name + " is not a resident of " + this.getName());
+      }
+      this.residents.remove(name);
+      System.out.println(name + " has just moved out into " + this.getName());
+      return name;
+    }
+    /**
+     * Checks whether a person is from a house 
+     * @param person- person we are identifying whether they live in the house 
+     * @return boolean of whether the person lives in the house
+     */
+    public boolean isResident(String person){
+      return this.residents.contains(person);
+    }
+      /**
      * a method that gives the description of the house 
      */
     public String toString() {
